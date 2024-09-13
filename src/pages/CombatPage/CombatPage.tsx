@@ -68,7 +68,7 @@ const CombatPage: React.FC<{
     }
   }, [currentRound, timer]);
 
-  const setUserDefaultCard = useCallback(() => handleCardSelect("blue"), []);
+  const setUserDefaultCard = useCallback(() => handleCardSelect("blue"), [handleCardSelect]);
 
   useEffect(() => {
     if (timer === 0 && currentRound < MAX_ROUND) {
