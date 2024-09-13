@@ -1,6 +1,6 @@
 {
-  "name": "lds",
-  "version": "0.1.0",
+  "name": "frontend-judgement-day-coin",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://serhiizghama.github.io/frontend-judgement-day-coin",
   "dependencies": {
