@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./CombatPage.css";
 import { Loader } from "../../components/Loader/Loader";
+import { configs } from "../../configs";
 
 const MAX_ROUND = 5;
-const ROUND_TIME = 10;
+const ROUND_TIME = configs.HAS_NEXT_ROUND_SWITCHER ? 120 : 10;
 
 const CombatPage: React.FC<{
   onChangePage: () => void;
@@ -16,7 +17,6 @@ const CombatPage: React.FC<{
   const [showCards, setShowCards] = useState(true);
   const [timer, setTimer] = useState(ROUND_TIME);
   const [gameResult, setGameResult] = useState<string | null>(null);
-
   const [playerScore, setPlayerScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
 
@@ -24,6 +24,9 @@ const CombatPage: React.FC<{
     if (selectedCards.length < 10) {
       setSelectedCards((prevCards) => [...prevCards, color]);
       setShowCards(false);
+      if (configs.HAS_NEXT_ROUND_SWITCHER) {
+        setTimer(1);
+      }
     }
   }, [selectedCards.length]); // Добавь зависимости, если они нужны
 
@@ -172,15 +175,19 @@ const CombatPage: React.FC<{
             <div className="cards-container">
               <div
                 className="card card-red"
-                onClick={() => handleCardSelect("red")}
+                onClick={() => {
+                  handleCardSelect("red");
+                }}
               >
-                ✖
+                <span className="simbol">🏹</span>
               </div>
               <div
                 className="card card-blue"
-                onClick={() => handleCardSelect("blue")}
+                onClick={() => {
+                  handleCardSelect("blue");
+                }}
               >
-                ✚
+                <span className="simbol"> 🌾</span>
               </div>
             </div>
           ) : (

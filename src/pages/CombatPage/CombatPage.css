@@ -104,6 +104,13 @@
     font-size: 1.25rem;
   }
 
+  .simbol {
+    margin-top: -15px;
+    padding: 5px 10px;
+    display: inline-block;
+    background: #000;
+    border-radius: 60px;
+  }
 
   .loader {
     width: 50px;

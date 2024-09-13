@@ -27,7 +27,7 @@ const AncientWheel: React.FC<{
   }, [isSpinning, waitForChangePage, onChangePage]);
 
   return (
-    <>
+    <div className="page">
       <div className="container">
         <div className="score">
           <h3>
@@ -35,22 +35,24 @@ const AncientWheel: React.FC<{
           </h3>
         </div>
 
-        <motion.div
-          className="ancient-wheel"
-          animate={{ rotate: rotation }}
-          transition={{ duration: 5, ease: "easeOut" }}
-          onAnimationComplete={() => setIsSpinning(false)}
-        >
-          {[...Array(24)].map((_, index) => (
-            <div
-              key={index}
-              className="wheel-sector"
-              style={{ transform: `rotate(${index * 15}deg)` }}
-            />
-          ))}
-          <div className="wheel-border" />
-          <div className="wheel-inner-border" />
-        </motion.div>
+        {(isSpinning && (
+          <motion.div
+            className="ancient-wheel"
+            animate={{ rotate: rotation }}
+            transition={{ duration: 5, ease: "easeOut" }}
+            onAnimationComplete={() => setIsSpinning(false)}
+          >
+            {[...Array(24)].map((_, index) => (
+              <div
+                key={index}
+                className="wheel-sector"
+                style={{ transform: `rotate(${index * 15}deg)` }}
+              />
+            ))}
+            <div className="wheel-border" />
+            <div className="wheel-inner-border" />
+          </motion.div>
+        )) || <div className="rules-box" />}
         {(!isSpinning && (
           <button
             onClick={spinWheel}
@@ -62,7 +64,7 @@ const AncientWheel: React.FC<{
         )) || <h3 className="partner-selection">PARTNER SELECTION</h3>}
       </div>
       <div className="container"></div>
-    </>
+    </div>
   );
 };
 
