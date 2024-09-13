@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontend-judgement-day-coin/static/css/main.c22fe5b0.css",
-    "main.js": "/frontend-judgement-day-coin/static/js/main.3f0592b4.js",
+    "main.js": "/frontend-judgement-day-coin/static/js/main.14d78298.js",
     "static/js/453.8257dae4.chunk.js": "/frontend-judgement-day-coin/static/js/453.8257dae4.chunk.js",
     "static/media/bk.png": "/frontend-judgement-day-coin/static/media/bk.4268da6d69fd87b125b6.png",
     "static/media/red.png": "/frontend-judgement-day-coin/static/media/red.acb9d2b115ed61f0dc4d.png",
@@ -14,11 +14,11 @@
     "static/media/loader-coin-back.png": "/frontend-judgement-day-coin/static/media/loader-coin-back.f5308abb4b67a5826222.png",
     "index.html": "/frontend-judgement-day-coin/index.html",
     "main.c22fe5b0.css.map": "/frontend-judgement-day-coin/static/css/main.c22fe5b0.css.map",
-    "main.3f0592b4.js.map": "/frontend-judgement-day-coin/static/js/main.3f0592b4.js.map",
+    "main.14d78298.js.map": "/frontend-judgement-day-coin/static/js/main.14d78298.js.map",
     "453.8257dae4.chunk.js.map": "/frontend-judgement-day-coin/static/js/453.8257dae4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c22fe5b0.css",
-    "static/js/main.3f0592b4.js"
+    "static/js/main.14d78298.js"
   ]
 }
