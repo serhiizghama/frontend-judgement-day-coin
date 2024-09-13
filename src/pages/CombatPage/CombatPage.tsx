@@ -20,12 +20,12 @@ const CombatPage: React.FC<{
   const [playerScore, setPlayerScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
 
-  const handleCardSelect = (color: string) => {
+  const handleCardSelect = useCallback((color: string) => {
     if (selectedCards.length < 10) {
       setSelectedCards((prevCards) => [...prevCards, color]);
       setShowCards(false);
     }
-  };
+  }, [selectedCards.length]); // Добавь зависимости, если они нужны
 
   const handleOpponentCardSelect = () => {
     const colors = ["red", "blue"];
