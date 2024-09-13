@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/frontend-judgement-day-coin/static/css/main.3495b751.css",
-    "main.js": "/frontend-judgement-day-coin/static/js/main.851c8a35.js",
+    "main.css": "/frontend-judgement-day-coin/static/css/main.c22fe5b0.css",
+    "main.js": "/frontend-judgement-day-coin/static/js/main.3f0592b4.js",
     "static/js/453.8257dae4.chunk.js": "/frontend-judgement-day-coin/static/js/453.8257dae4.chunk.js",
     "static/media/bk.png": "/frontend-judgement-day-coin/static/media/bk.4268da6d69fd87b125b6.png",
     "static/media/red.png": "/frontend-judgement-day-coin/static/media/red.acb9d2b115ed61f0dc4d.png",
+    "static/media/rules.png": "/frontend-judgement-day-coin/static/media/rules.ab315e1b12999b8eecdc.png",
     "static/media/blue.png": "/frontend-judgement-day-coin/static/media/blue.242c0aa68f49eacc0da5.png",
     "static/media/gray.png": "/frontend-judgement-day-coin/static/media/gray.f2718ed7a5aee78c5372.png",
     "static/media/pb.png": "/frontend-judgement-day-coin/static/media/pb.8728a1ae9b722510d2bd.png",
@@ -12,12 +13,12 @@
     "static/media/wheel-removebg-preview.png": "/frontend-judgement-day-coin/static/media/wheel-removebg-preview.4e588f9ab25c4c830bf6.png",
     "static/media/loader-coin-back.png": "/frontend-judgement-day-coin/static/media/loader-coin-back.f5308abb4b67a5826222.png",
     "index.html": "/frontend-judgement-day-coin/index.html",
-    "main.3495b751.css.map": "/frontend-judgement-day-coin/static/css/main.3495b751.css.map",
-    "main.851c8a35.js.map": "/frontend-judgement-day-coin/static/js/main.851c8a35.js.map",
+    "main.c22fe5b0.css.map": "/frontend-judgement-day-coin/static/css/main.c22fe5b0.css.map",
+    "main.3f0592b4.js.map": "/frontend-judgement-day-coin/static/js/main.3f0592b4.js.map",
     "453.8257dae4.chunk.js.map": "/frontend-judgement-day-coin/static/js/453.8257dae4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3495b751.css",
-    "static/js/main.851c8a35.js"
+    "static/css/main.c22fe5b0.css",
+    "static/js/main.3f0592b4.js"
   ]
 }
