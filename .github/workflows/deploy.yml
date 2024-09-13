@@ -26,8 +26,9 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "Serhii Zghama"
+        git config --global user.name "serhiizghama"
         git config --global user.email "zmrser@gmail.com"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/serhiizghama/frontend-judgement-day-coin.git
 
     - name: Deploy to GitHub Pages
       run: npm run deploy
