@@ -20,15 +20,18 @@ const CombatPage: React.FC<{
   const [playerScore, setPlayerScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
 
-  const handleCardSelect = useCallback((color: string) => {
-    if (selectedCards.length < 10) {
-      setSelectedCards((prevCards) => [...prevCards, color]);
-      setShowCards(false);
-      if (configs.HAS_NEXT_ROUND_SWITCHER) {
-        setTimer(1);
+  const handleCardSelect = useCallback(
+    (color: string) => {
+      if (selectedCards.length < 10) {
+        setSelectedCards((prevCards) => [...prevCards, color]);
+        setShowCards(false);
+        if (configs.HAS_NEXT_ROUND_SWITCHER) {
+          setTimer(1);
+        }
       }
-    }
-  }, [selectedCards.length]); // Добавь зависимости, если они нужны
+    },
+    [selectedCards.length]
+  );
 
   const handleOpponentCardSelect = () => {
     const colors = ["red", "blue"];
@@ -71,7 +74,10 @@ const CombatPage: React.FC<{
     }
   }, [currentRound, timer]);
 
-  const setUserDefaultCard = useCallback(() => handleCardSelect("blue"), [handleCardSelect]);
+  const setUserDefaultCard = useCallback(
+    () => handleCardSelect("blue"),
+    [handleCardSelect]
+  );
 
   useEffect(() => {
     if (timer === 0 && currentRound < MAX_ROUND) {
@@ -124,7 +130,7 @@ const CombatPage: React.FC<{
     if (gameResult) {
       setTimeout(() => {
         onChangePage();
-      }, 3000);
+      }, ROUND_TIME * 1000);
     }
   }, [onChangePage, gameResult]);
 
@@ -193,7 +199,11 @@ const CombatPage: React.FC<{
           ) : (
             !gameResult && <Loader />
           )}
-          {gameResult && <h3>YOUR SCORE IS {userPoints}</h3>}
+          {gameResult && (
+            <button onClick={() => onChangePage()} className="spin-button">
+              EXIT
+            </button>
+          )}
         </div>
       </div>
     </>
