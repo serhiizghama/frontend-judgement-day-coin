@@ -61,7 +61,7 @@ const AncientWheel: React.FC<{
           >
             NEW GAME
           </button>
-        )) || <h3 className="partner-selection">PARTNER SELECTION</h3>}
+        )) || <h3 className="partner-selection">LOOKING FOR OPPONENT</h3>}
       </div>
       <div className="container"></div>
     </div>
